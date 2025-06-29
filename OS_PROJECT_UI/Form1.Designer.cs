@@ -38,7 +38,7 @@
             btnQueue = new Button();
             pbLogo = new PictureBox();
             dgvCurrentQueue = new DataGridView();
-            dgvServing = new DataGridView();
+            dgvServingNow = new DataGridView();
             lblCurrent = new Label();
             lblServing = new Label();
             txtWaitingTime = new TextBox();
@@ -47,7 +47,7 @@
             btnNext = new Button();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvCurrentQueue).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgvServing).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvServingNow).BeginInit();
             SuspendLayout();
             // 
             // lblWelcome
@@ -130,7 +130,7 @@
             // 
             // pbLogo
             // 
-            pbLogo.Image = Properties.Resources.utensils_logo;
+            pbLogo.Image = OS_PROJECT_UI.Properties.Resources.utensils_logo;
             pbLogo.Location = new Point(-29, 12);
             pbLogo.Name = "pbLogo";
             pbLogo.Size = new Size(181, 94);
@@ -148,15 +148,15 @@
             dgvCurrentQueue.Size = new Size(565, 259);
             dgvCurrentQueue.TabIndex = 9;
             // 
-            // dgvServing
+            // dgvServingNow
             // 
-            dgvServing.BackgroundColor = SystemColors.WindowFrame;
-            dgvServing.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvServing.Location = new Point(584, 373);
-            dgvServing.Name = "dgvServing";
-            dgvServing.RowHeadersWidth = 51;
-            dgvServing.Size = new Size(495, 259);
-            dgvServing.TabIndex = 10;
+            dgvServingNow.BackgroundColor = SystemColors.WindowFrame;
+            dgvServingNow.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvServingNow.Location = new Point(584, 373);
+            dgvServingNow.Name = "dgvServingNow";
+            dgvServingNow.RowHeadersWidth = 51;
+            dgvServingNow.Size = new Size(495, 259);
+            dgvServingNow.TabIndex = 10;
             // 
             // lblCurrent
             // 
@@ -220,6 +220,7 @@
             btnNext.TabIndex = 16;
             btnNext.Text = "Next";
             btnNext.UseVisualStyleBackColor = false;
+            btnNext.Click += btnNext_Click;
             // 
             // UI
             // 
@@ -233,7 +234,7 @@
             Controls.Add(txtWaitingTime);
             Controls.Add(lblServing);
             Controls.Add(lblCurrent);
-            Controls.Add(dgvServing);
+            Controls.Add(dgvServingNow);
             Controls.Add(dgvCurrentQueue);
             Controls.Add(pbLogo);
             Controls.Add(btnQueue);
@@ -248,7 +249,7 @@
             Text = "UI";
             ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvCurrentQueue).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgvServing).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvServingNow).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -265,7 +266,7 @@
         private Button btnQueue;
         private PictureBox pbLogo;
         private DataGridView dgvCurrentQueue;
-        private DataGridView dgvServing;
+        private DataGridView dgvServingNow;
         private Label lblCurrent;
         private Label lblServing;
         private TextBox txtWaitingTime;
