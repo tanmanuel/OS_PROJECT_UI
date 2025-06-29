@@ -43,7 +43,8 @@
             lblServing = new Label();
             txtEating = new TextBox();
             lblEating = new Label();
-            lblServe = new Button();
+            btnServe = new Button();
+            btnNext = new Button();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvCurrent).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvServing).BeginInit();
@@ -193,18 +194,31 @@
             lblEating.TabIndex = 14;
             lblEating.Text = "Eating Time (Minutes)";
             // 
-            // lblServe
+            // btnServe
             // 
-            lblServe.BackColor = SystemColors.Desktop;
-            lblServe.Cursor = Cursors.Hand;
-            lblServe.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            lblServe.ForeColor = SystemColors.ControlLightLight;
-            lblServe.Location = new Point(660, 230);
-            lblServe.Name = "lblServe";
-            lblServe.Size = new Size(168, 41);
-            lblServe.TabIndex = 15;
-            lblServe.Text = "Serve";
-            lblServe.UseVisualStyleBackColor = false;
+            btnServe.BackColor = SystemColors.Desktop;
+            btnServe.Cursor = Cursors.Hand;
+            btnServe.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnServe.ForeColor = SystemColors.ControlLightLight;
+            btnServe.Location = new Point(890, 230);
+            btnServe.Name = "btnServe";
+            btnServe.Size = new Size(168, 41);
+            btnServe.TabIndex = 15;
+            btnServe.Text = "Serve";
+            btnServe.UseVisualStyleBackColor = false;
+            // 
+            // btnNext
+            // 
+            btnNext.BackColor = SystemColors.Desktop;
+            btnNext.Cursor = Cursors.Hand;
+            btnNext.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnNext.ForeColor = SystemColors.ControlLightLight;
+            btnNext.Location = new Point(660, 230);
+            btnNext.Name = "btnNext";
+            btnNext.Size = new Size(168, 41);
+            btnNext.TabIndex = 16;
+            btnNext.Text = "Next";
+            btnNext.UseVisualStyleBackColor = false;
             // 
             // UI
             // 
@@ -212,7 +226,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
             ClientSize = new Size(1131, 676);
-            Controls.Add(lblServe);
+            Controls.Add(btnNext);
+            Controls.Add(btnServe);
             Controls.Add(lblEating);
             Controls.Add(txtEating);
             Controls.Add(lblServing);
@@ -254,6 +269,7 @@
         private Label lblServing;
         private TextBox txtEating;
         private Label lblEating;
-        private Button lblServe;
+        private Button btnServe;
+        private Button btnNext;
     }
 }
