@@ -33,7 +33,6 @@
             lblWaiting = new Label();
             txtFullName = new TextBox();
             txtContactNumber = new TextBox();
-            comboEating = new ComboBox();
             dtpDate = new DateTimePicker();
             btnQueue = new Button();
             pbLogo = new PictureBox();
@@ -42,9 +41,10 @@
             lblCurrent = new Label();
             lblServing = new Label();
             txtWaitingTime = new TextBox();
-            lblEating = new Label();
+            lblDining = new Label();
             btnServe = new Button();
             btnNext = new Button();
+            txtDiningTime = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvCurrentQueue).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvServingNow).BeginInit();
@@ -54,9 +54,9 @@
             // 
             lblWelcome.AutoSize = true;
             lblWelcome.Font = new Font("Microsoft Sans Serif", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblWelcome.Location = new Point(323, 19);
+            lblWelcome.Location = new Point(283, 14);
             lblWelcome.Name = "lblWelcome";
-            lblWelcome.Size = new Size(452, 91);
+            lblWelcome.Size = new Size(363, 73);
             lblWelcome.TabIndex = 0;
             lblWelcome.Text = "WELCOME";
             // 
@@ -64,9 +64,9 @@
             // 
             lblCustomer.AutoSize = true;
             lblCustomer.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCustomer.Location = new Point(75, 131);
+            lblCustomer.Location = new Point(66, 98);
             lblCustomer.Name = "lblCustomer";
-            lblCustomer.Size = new Size(156, 25);
+            lblCustomer.Size = new Size(129, 20);
             lblCustomer.TabIndex = 1;
             lblCustomer.Text = "Customer Details";
             // 
@@ -74,9 +74,9 @@
             // 
             lblWaiting.AutoSize = true;
             lblWaiting.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblWaiting.Location = new Point(336, 131);
+            lblWaiting.Location = new Point(294, 98);
             lblWaiting.Name = "lblWaiting";
-            lblWaiting.Size = new Size(213, 25);
+            lblWaiting.Size = new Size(175, 20);
             lblWaiting.TabIndex = 2;
             lblWaiting.Text = "Waiting Time (Minutes)";
             // 
@@ -84,34 +84,29 @@
             // 
             txtFullName.BackColor = SystemColors.Window;
             txtFullName.ForeColor = SystemColors.InfoText;
-            txtFullName.Location = new Point(75, 159);
+            txtFullName.Location = new Point(66, 119);
+            txtFullName.Margin = new Padding(3, 2, 3, 2);
             txtFullName.Name = "txtFullName";
-            txtFullName.Size = new Size(226, 27);
+            txtFullName.Size = new Size(198, 23);
             txtFullName.TabIndex = 3;
             txtFullName.Text = "  Fullname*";
             // 
             // txtContactNumber
             // 
             txtContactNumber.ForeColor = SystemColors.InfoText;
-            txtContactNumber.Location = new Point(75, 197);
+            txtContactNumber.Location = new Point(66, 148);
+            txtContactNumber.Margin = new Padding(3, 2, 3, 2);
             txtContactNumber.Name = "txtContactNumber";
-            txtContactNumber.Size = new Size(226, 27);
+            txtContactNumber.Size = new Size(198, 23);
             txtContactNumber.TabIndex = 4;
             txtContactNumber.Text = "  Contact Number*";
             // 
-            // comboEating
-            // 
-            comboEating.FormattingEnabled = true;
-            comboEating.Location = new Point(660, 159);
-            comboEating.Name = "comboEating";
-            comboEating.Size = new Size(226, 28);
-            comboEating.TabIndex = 5;
-            // 
             // dtpDate
             // 
-            dtpDate.Location = new Point(336, 197);
+            dtpDate.Location = new Point(294, 148);
+            dtpDate.Margin = new Padding(3, 2, 3, 2);
             dtpDate.Name = "dtpDate";
-            dtpDate.Size = new Size(226, 27);
+            dtpDate.Size = new Size(198, 23);
             dtpDate.TabIndex = 6;
             // 
             // btnQueue
@@ -120,9 +115,10 @@
             btnQueue.Cursor = Cursors.Hand;
             btnQueue.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
             btnQueue.ForeColor = SystemColors.ControlLightLight;
-            btnQueue.Location = new Point(394, 230);
+            btnQueue.Location = new Point(345, 175);
+            btnQueue.Margin = new Padding(3, 2, 3, 2);
             btnQueue.Name = "btnQueue";
-            btnQueue.Size = new Size(168, 41);
+            btnQueue.Size = new Size(147, 31);
             btnQueue.TabIndex = 7;
             btnQueue.Text = "Queue Customer";
             btnQueue.UseVisualStyleBackColor = false;
@@ -130,10 +126,11 @@
             // 
             // pbLogo
             // 
-            pbLogo.Image = OS_PROJECT_UI.Properties.Resources.utensils_logo;
-            pbLogo.Location = new Point(-29, 12);
+            pbLogo.Image = Properties.Resources.utensils_logo;
+            pbLogo.Location = new Point(-25, 9);
+            pbLogo.Margin = new Padding(3, 2, 3, 2);
             pbLogo.Name = "pbLogo";
-            pbLogo.Size = new Size(181, 94);
+            pbLogo.Size = new Size(158, 70);
             pbLogo.SizeMode = PictureBoxSizeMode.Zoom;
             pbLogo.TabIndex = 8;
             pbLogo.TabStop = false;
@@ -142,29 +139,31 @@
             // 
             dgvCurrentQueue.BackgroundColor = SystemColors.WindowFrame;
             dgvCurrentQueue.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCurrentQueue.Location = new Point(25, 373);
+            dgvCurrentQueue.Location = new Point(33, 280);
+            dgvCurrentQueue.Margin = new Padding(3, 2, 3, 2);
             dgvCurrentQueue.Name = "dgvCurrentQueue";
             dgvCurrentQueue.RowHeadersWidth = 51;
-            dgvCurrentQueue.Size = new Size(565, 259);
+            dgvCurrentQueue.Size = new Size(459, 194);
             dgvCurrentQueue.TabIndex = 9;
             // 
             // dgvServingNow
             // 
             dgvServingNow.BackgroundColor = SystemColors.WindowFrame;
             dgvServingNow.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvServingNow.Location = new Point(584, 373);
+            dgvServingNow.Location = new Point(498, 280);
+            dgvServingNow.Margin = new Padding(3, 2, 3, 2);
             dgvServingNow.Name = "dgvServingNow";
             dgvServingNow.RowHeadersWidth = 51;
-            dgvServingNow.Size = new Size(495, 259);
+            dgvServingNow.Size = new Size(460, 194);
             dgvServingNow.TabIndex = 10;
             // 
             // lblCurrent
             // 
             lblCurrent.AutoSize = true;
             lblCurrent.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCurrent.Location = new Point(25, 347);
+            lblCurrent.Location = new Point(33, 259);
             lblCurrent.Name = "lblCurrent";
-            lblCurrent.Size = new Size(127, 23);
+            lblCurrent.Size = new Size(106, 19);
             lblCurrent.TabIndex = 11;
             lblCurrent.Text = "Current Queue";
             // 
@@ -172,28 +171,29 @@
             // 
             lblServing.AutoSize = true;
             lblServing.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblServing.Location = new Point(584, 347);
+            lblServing.Location = new Point(498, 259);
             lblServing.Name = "lblServing";
-            lblServing.Size = new Size(114, 23);
+            lblServing.Size = new Size(96, 19);
             lblServing.TabIndex = 12;
             lblServing.Text = "Serving Now";
             // 
             // txtWaitingTime
             // 
-            txtWaitingTime.Location = new Point(336, 159);
+            txtWaitingTime.Location = new Point(294, 119);
+            txtWaitingTime.Margin = new Padding(3, 2, 3, 2);
             txtWaitingTime.Name = "txtWaitingTime";
-            txtWaitingTime.Size = new Size(226, 27);
+            txtWaitingTime.Size = new Size(198, 23);
             txtWaitingTime.TabIndex = 13;
             // 
-            // lblEating
+            // lblDining
             // 
-            lblEating.AutoSize = true;
-            lblEating.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblEating.Location = new Point(660, 131);
-            lblEating.Name = "lblEating";
-            lblEating.Size = new Size(201, 25);
-            lblEating.TabIndex = 14;
-            lblEating.Text = "Eating Time (Minutes)";
+            lblDining.AutoSize = true;
+            lblDining.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDining.Location = new Point(578, 98);
+            lblDining.Name = "lblDining";
+            lblDining.Size = new Size(167, 20);
+            lblDining.TabIndex = 14;
+            lblDining.Text = "Dining Time (Minutes)";
             // 
             // btnServe
             // 
@@ -201,12 +201,14 @@
             btnServe.Cursor = Cursors.Hand;
             btnServe.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
             btnServe.ForeColor = SystemColors.ControlLightLight;
-            btnServe.Location = new Point(890, 230);
+            btnServe.Location = new Point(780, 175);
+            btnServe.Margin = new Padding(3, 2, 3, 2);
             btnServe.Name = "btnServe";
-            btnServe.Size = new Size(168, 41);
+            btnServe.Size = new Size(147, 31);
             btnServe.TabIndex = 15;
-            btnServe.Text = "Serve";
+            btnServe.Text = "Finish Customer";
             btnServe.UseVisualStyleBackColor = false;
+            btnServe.Click += btnServe_Click;
             // 
             // btnNext
             // 
@@ -214,23 +216,33 @@
             btnNext.Cursor = Cursors.Hand;
             btnNext.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
             btnNext.ForeColor = SystemColors.ControlLightLight;
-            btnNext.Location = new Point(660, 230);
+            btnNext.Location = new Point(578, 175);
+            btnNext.Margin = new Padding(3, 2, 3, 2);
             btnNext.Name = "btnNext";
-            btnNext.Size = new Size(168, 41);
+            btnNext.Size = new Size(147, 31);
             btnNext.TabIndex = 16;
-            btnNext.Text = "Next";
+            btnNext.Text = "Serve Next";
             btnNext.UseVisualStyleBackColor = false;
             btnNext.Click += btnNext_Click;
             // 
+            // txtDiningTime
+            // 
+            txtDiningTime.Location = new Point(578, 120);
+            txtDiningTime.Margin = new Padding(3, 2, 3, 2);
+            txtDiningTime.Name = "txtDiningTime";
+            txtDiningTime.Size = new Size(198, 23);
+            txtDiningTime.TabIndex = 17;
+            // 
             // UI
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
-            ClientSize = new Size(1131, 676);
+            ClientSize = new Size(990, 507);
+            Controls.Add(txtDiningTime);
             Controls.Add(btnNext);
             Controls.Add(btnServe);
-            Controls.Add(lblEating);
+            Controls.Add(lblDining);
             Controls.Add(txtWaitingTime);
             Controls.Add(lblServing);
             Controls.Add(lblCurrent);
@@ -239,13 +251,14 @@
             Controls.Add(pbLogo);
             Controls.Add(btnQueue);
             Controls.Add(dtpDate);
-            Controls.Add(comboEating);
             Controls.Add(txtContactNumber);
             Controls.Add(txtFullName);
             Controls.Add(lblWaiting);
             Controls.Add(lblCustomer);
             Controls.Add(lblWelcome);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "UI";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "UI";
             ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvCurrentQueue).EndInit();
@@ -270,8 +283,9 @@
         private Label lblCurrent;
         private Label lblServing;
         private TextBox txtWaitingTime;
-        private Label lblEating;
+        private Label lblDining;
         private Button btnServe;
         private Button btnNext;
+        private TextBox txtDiningTime;
     }
 }
